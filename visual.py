@@ -28,7 +28,7 @@ def dither(image):
 
     imgArray = np.clip(imgArray, 0, 255)  #hata eklenince 0-255 aralığından çıkmamak için
 
-    binaryImg = Image.fromarray(imgArray).convert('1') 
+    binaryImg = Image.fromarray(imgArray)
     binaryImg.save("output-floyd-steinberg.png")
     return binaryImg
 
